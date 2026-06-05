@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+// import '../styles/global.css';
+import githubImage from "../assets/github.svg";
+import linkedinImage from "../assets/linkedin.svg";
+// const { frontmatter } = Astro.props;
+
+const technicalBookTitle = 'Operating Systems: Three Easy Pieces';
+const technicalBookAuthor = 'Andrea Arpaci-Dusseau';
+
+const nontechnicalBookTitle = 'Brief History of Equality';
+const nontechnicalBookAuthor = 'Thomas Piketty';
+
+const fictionBookTitle = 'There Is No Antimemetic Division';
+const fictionBookAuthor = 'qntm';
+---
+
+<div class="left-content">
+    <ul class="links">
+        <li><h4>Home</h4></li>
+        <li><h4>Posts</h4></li>
+        <li><h4>Bookmarks</h4></li>
+        <li>&nbsp</li>
+        <li>
+            <h4>Currently Reading</h4>
+
+            <h6>Technical</h6>
+            <p>
+                {technicalBookTitle}
+                <br />
+                <i>{technicalBookAuthor}</i>
+            </p>
+
+            <h6>Non-technical</h6>
+            <p>
+                {nontechnicalBookTitle}
+                <br />
+                <i>{nontechnicalBookAuthor}</i>
+            </p>
+
+            <h6>Fiction</h6>
+            <p>
+                {fictionBookTitle}
+                <br />
+                <i>{fictionBookAuthor}</i>
+            </p>
+        </li>
+    </ul>
+    <ul class="social-media">
+        <li>
+            <a
+                href="https://www.linkedin.com/in/andrew-lei/"
+                target="_blank"
+                rel="noopener"><Image src={linkedinImage} alt="linkedin" /></a
+            >
+            <li><Image src={githubImage} alt="github" /></li>
+        </li>
+    </ul>
+</div>
