@@ -27,5 +27,29 @@ import numpy as np
 for i in range(x):
     print(i + 2)
 
+## This should print all the numbers from 1 to 10
+```
 
+``` php
+return [
+    'listeners' => [
+        WorkerStarting::class => [                                      
+            EnsureUploadedFilesAreValid::class,                         
+        ],
+
+        RequestReceived::class => [                                     
+            ...Octane::prepareApplicationForNextOperation(),            
+            ...Octane::prepareApplicationForNextRequest(),              
+        ],
+
+        WorkerErrorOccurred::class => [                                 
+            ReportException::class,                                     
+            StopWorkerIfNecessary::class,                               
+        ],
+    ],
+
+    'warm' => [
+        ...Octane::defaultServicesToWarm(),                             
+    ],
+]
 ```

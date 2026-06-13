@@ -7,9 +7,7 @@ html, body {
 
 }
 
-ul {
-    list-style-type: none;
-}
+
 
 body {
     background-color: #EAE0CF;
@@ -95,8 +93,4 @@ a { color: inherit; }
   .left-column, .right-column {
     display: none;
   }
-}
-
-.center-column ul {
-    list-style-type: disc;
 }

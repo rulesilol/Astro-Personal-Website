@@ -5,5 +5,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://rulesilol.github.io',
     base: '/Astro-Personal-Website',
-
+    markdown: {
+        syntaxHighlight: 'prism',
+  },
 });
